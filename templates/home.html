@@ -1,0 +1,24 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HOME</title>
+    <style>
+        body{
+            background-image:url("{%static 'img.jpg'%}");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+<p style="color:darkred"><strong>Hi!!!!.....Welcome to</strong></p>
+<h1>House Price Predictor!</h1>
+<form action="predict">
+    <input type="submit" value="Start">
+</form>
+</body>
+</html>

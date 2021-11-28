@@ -1,0 +1,85 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>predict</title>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1">
+    <link href="{% static 'css/bootstrap.min.css' %}" >
+    <script src="{% static 'bootstrap.min.js' %}"></script>
+    <style>
+        main{
+            position:fixed;
+            top:120px;
+            left:410px;
+            width:700px;
+            background-color:gainsboro;
+            align-items:center;
+            border-radius:5%;
+        }
+        div{
+            padding:15px;
+        }
+        input[type=submit]{
+            background-color:Black;
+            color:white;
+            cursor:pointer;
+            padding: 14px 30px;
+        }
+        h1{
+            font-size:30px;
+        }
+        h2{
+            font-size:20px;
+            color:DarkRed;
+        }
+        body{
+            background-image: url("{% static 'img.jpg'%}");
+            background-size:cover;
+            background-repeat:no-repeat;
+        }
+    </style>
+</head>
+<body style="text-align: center">
+<h1><strong>Welcome to Predict Page</strong></h1>
+<form action="result">
+    <div class="row">
+        <div class="colSM" style="background-color: bisque">
+            <p>area</p>
+            <label>
+                <input type="text" name="n1">
+            </label>
+        </div>
+        <div class="colSM" style="background-color: aliceblue">
+            <p>square feet</p>
+            <label>
+                <input type="number" name="n2">
+            </label>
+        </div>
+        <div class="colSM" style="background-color: beige">
+            <p>bath</p>
+            <label>
+                <input type="number" name="n3">
+            </label>
+        </div>
+        <div class="colSM" style="background-color: burlywood">
+            <p>bhk</p>
+            <label>
+                <input type="number" name="n4">
+            </label>
+        </div>
+    </div>
+    <div class="row">
+        <input type="submit" value="predict">
+    </div>
+</form>
+<form>
+<div class="row">
+    <h2>{{ result2 }}</h2>
+</div>
+    <p><strong> Return to "HOME" page to predict more! HAPPY PREDICTING!!!</strong>></p>
+</form>
+</body>
+</html>
